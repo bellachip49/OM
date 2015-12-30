@@ -45,7 +45,7 @@ while True:
     for i in range(20):
       flash()
   if (GPIO.input(18) ==0):
-    for j in range(10):
+    for j in range(0,5):
       for k in range(1):
         GPIO.output(23, True)
         sleep(0.09)
@@ -79,7 +79,7 @@ while True:
         sleep(0.09)
         GPIO.output(17, False)
         sleep(0.09)
-      for x in range(7):
+      for x in range(1):
         GPIO.output(17, True)
         sleep(0.09)
         GPIO.output(17, False)
