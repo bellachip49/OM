@@ -5,7 +5,6 @@
 
 import RPi.GPIO as GPIO
 from time import sleep
-import pifacedigitalio
 
 GPIO.setwarnings(False)
 GPIO.setmode(GPIO.BCM)
@@ -40,9 +39,10 @@ def flash():
   GPIO.output(17, False)
   sleep(0.5)
 
+# This is the area where the bug was located
 while True:
   if (GPIO.input(21) ==0):
-    for i in range(20):
+    for i in range(10):
       flash()
   if (GPIO.input(18) ==0):
     for j in range(0,5):
