@@ -40,4 +40,6 @@ while True:
     for i in range(20):
       flash()
   if (GPIO.input(18) ==0):
-    for j in range(
+    for j in range(10):
+      for k in range(0,8):
+        
