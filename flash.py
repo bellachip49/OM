@@ -5,7 +5,6 @@
 
 import RPi.GPIO as GPIO
 import time
-from time import sleep
 import pifacedigitalio
 
 GPIO.setwarnings(False)
@@ -41,5 +40,28 @@ while True:
       flash()
   if (GPIO.input(18) ==0):
     for j in range(10):
-      for k in range(0,8):
-        
+      for k in range(1):
+        GPIO.output(24, True)
+        time.sleep(0.02)
+        GPIO.output(24, False)
+        time.sleep(0.02)
+        GPIO.output(25, True)
+        time.sleep(0.02)
+        GPIO.output(25, False)
+        time.sleep(0.02)
+        GPIO.output(12, True)
+        time.sleep(0.02)
+        GPIO.output(12, False)
+        time.sleep(0.02)
+        GPIO.output(16, True)
+        time.sleep(0.02)
+        GPIO.output(16, False)
+        time.sleep(0.02)
+        GPIO.output(20, True)
+        time.sleep(0.02)
+        GPIO.output(20, False)
+        time.sleep(0.02)
+        GPIO.output(4, True)
+        time.sleep(0.02)
+        GPIO.output(4, False)
+        time.sleep(0.02)
