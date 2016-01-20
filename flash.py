@@ -39,7 +39,6 @@ def flash():
   GPIO.output(17, False)
   sleep(0.5)
 
-# This is the area where the bug was located
 while True:
   if (GPIO.input(21) ==0):
       for j in range(10):
