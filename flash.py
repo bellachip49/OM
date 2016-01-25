@@ -20,6 +20,7 @@ GPIO.setup(21, GPIO.IN, pull_up_down = GPIO.PUD_UP)
 GPIO.setup(18, GPIO.IN, pull_up_down = GPIO.PUD_UP)
 
 def flash():
+  print "blink"
   GPIO.output(23, True)
   GPIO.output(24, True)
   GPIO.output(25, True)
@@ -75,6 +76,7 @@ while True:
           sleep(0.02)
           GPIO.output(17, False)
           sleep(0.02)
+          print "circled"
   if (GPIO.input(18) ==0):
     for i in range(10):
       flash()
