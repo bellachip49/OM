@@ -18,15 +18,14 @@ GPIO.setup(4, GPIO.OUT)
 GPIO.setup(17, GPIO.OUT)
 GPIO.setup(21, GPIO.IN, pull_up_down = GPIO.PUD_UP)
 GPIO.setup(18, GPIO.IN, pull_up_down = GPIO.PUD_UP)
-
-  GPIO.output(23, False)
-  GPIO.output(24, False)
-  GPIO.output(25, False)
-  GPIO.output(12, False)
-  GPIO.output(16, False)
-  GPIO.output(20, False)
-  GPIO.output(4, False)
-  GPIO.output(17, False)
+GPIO.output(23, False)
+GPIO.output(24, False)
+GPIO.output(25, False)
+GPIO.output(12, False)
+GPIO.output(16, False)
+GPIO.output(20, False)
+GPIO.output(4, False)
+GPIO.output(17, False)
 
 def flash():
   print "blink"
