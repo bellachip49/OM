@@ -4,6 +4,7 @@
 # Flash an LED light
 
 import RPi.GPIO as GPIO
+import subprocess
 from time import sleep
 
 GPIO.setwarnings(False)
@@ -18,6 +19,7 @@ GPIO.setup(4, GPIO.OUT)
 GPIO.setup(17, GPIO.OUT)
 GPIO.setup(21, GPIO.IN, pull_up_down = GPIO.PUD_UP)
 GPIO.setup(18, GPIO.IN, pull_up_down = GPIO.PUD_UP)
+GPIO.setup(26, GPIO.IN, pull_up_down = GPIO.PUD_UP)
 GPIO.output(23, False)
 GPIO.output(24, False)
 GPIO.output(25, False)
@@ -85,6 +87,8 @@ while True:
           GPIO.output(17, False)
           sleep(0.02)
           print "circled"
-  if (GPIO.input(21) ==0):
+  elif (GPIO.input(21) ==0):
     for i in range(10):
       flash()
+  elif (GPIO.input(26) ==1):
+    print subprocess.Popen("/usr/bin/mpg321 /home/pi/Documents/audio_sandbox/proofyourlove.mp3", shell=True, stdout=subprocess.PIPE).stdout.read()
