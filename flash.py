@@ -1,7 +1,7 @@
+#!/usr/bin/env python
 # Krystal Kwan
 # 12/23/2015
 # Flash an LED light
-#!/usr/bin/env python
 
 import RPi.GPIO as GPIO
 from time import sleep
@@ -49,7 +49,7 @@ def flash():
   sleep(0.5)
 
 while True:
-  if (GPIO.input(21) ==0):
+  if (GPIO.input(18) ==0):
       for j in range(10):
         for k in range(1):
           GPIO.output(23, True)
@@ -85,6 +85,6 @@ while True:
           GPIO.output(17, False)
           sleep(0.02)
           print "circled"
-  if (GPIO.input(18) ==0):
+  if (GPIO.input(21) ==0):
     for i in range(10):
       flash()
