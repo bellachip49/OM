@@ -51,7 +51,7 @@ def flash():
   sleep(0.5)
 
 while True:
-  if (GPIO.input(18) ==0):
+  if (GPIO.input(21) ==0):
       for j in range(10):
         for k in range(1):
           GPIO.output(23, True)
@@ -87,8 +87,13 @@ while True:
           GPIO.output(17, False)
           sleep(0.02)
           print "circled"
-  elif (GPIO.input(21) ==0):
+      print subprocess.Popen("su - pi -c '/usr/bin/mpg321 /home/pi/Documents/audio_sandbox/CS.mp3 &'", shell=True, stdout=subprocess.PIPE).stdout.read()
+  elif (GPIO.input(18) ==0):
     for i in range(10):
       flash()
+    print subprocess.Popen("su - pi -c '/usr/bin/mpg321 /home/pi/Documents/audio_sandbox/Stronger.mp3 &'", shell=True, stdout=subprocess.PIPE).stdout.read()
   elif (GPIO.input(26) ==1):
-    print subprocess.Popen("/usr/bin/mpg321 /home/pi/Documents/audio_sandbox/proofyourlove.mp3", shell=True, stdout=subprocess.PIPE).stdout.read()
+      print "Play music"
+
+
+
